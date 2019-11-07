@@ -1,0 +1,11 @@
+<view class="bgc"></view>
+<view class="loginbtn">
+  <view class="closeBbb" bindtap="closeLogin">x</view>
+  <view class="logintitle">授权车道善</view>
+  <view class="loginImg">
+    <image src="../../public/login.jpg"></image>
+  </view>
+  <view class="loginMsg">需要微信授权后登录</view>
+  <view class="loginMsg1">登录后可以体验更多功能哦</view>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInformation">登录</button>
+</view>

@@ -1,0 +1,96 @@
+<view wx:if="{{!loginFalge}}">
+  <loginFlage bind:myevent="loginClose"></loginFlage>
+</view>
+<view class="contenner">
+  <view class="myBox">
+    <view class="padding">
+      <view class="mymsg">
+        <view class="msgtop">
+          <view class="mypic">
+            <image src="{{userInfo == null?'../public/cart.png':domain + '/sys/common/view/' + userInfo.avatar}}"></image>
+          </view>
+          <view class="mytext">
+            <text class="myname">{{userInfo.nick}}</text>
+            <view class="isVip">
+              <image class="vipimg" src="../public/vip.png"></image>
+              <text>购物享会员折扣</text>
+            </view>
+          </view>
+        </view>
+        <view class="myorderOptions">
+          <view class="optionsItem" bindtap="goOrder">
+            <image src="../public/orderone.png"></image>
+            <text>线上订单</text>
+          </view>
+          <view class="optionsItem" bindtap="goRouterOrder">
+            <image src="../public/ordertwo.png"></image>
+            <text>线下订单</text>
+          </view>
+          <view class="optionsItem" bindtap="goShoppingcar">
+            <image src="../public/ordercar.png"></image>
+            <text>购物车</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="advertising" bindtap="goadvertising">
+    <view class="advertisingbox">
+      <view class="advImg">
+        <image src="../public/ggid.png"></image>
+      </view>
+      <view class="advtext">
+        <text>广告购买</text>
+        <text>高效投递 大量曝光</text>
+      </view>
+      <view class="trueAdv">
+        <button class="advBtn">购买</button>
+      </view>
+    </view>
+  </view>
+  <view class="mymeniu">
+    <view class="meniuBox">
+      <view class="meniuItem" bindtap="goadvAdmin">
+        <image src="../public/advertising.png"></image>
+        <text>广告管理</text>
+      </view>
+      <view class="meniuItem" bindtap="goadvAdvRecord">
+        <image src="../public/listgg.png"></image>
+        <text>广告记录</text>
+      </view>
+      <view class="meniuItem" bindtap="goCoupon">
+        <image src="../public/stic.png"></image>
+        <text>优惠券</text>
+      </view>
+      <view class="meniuItem" bindtap="goAddress">
+        <image src="../public/myadd.png"></image>
+        <text>地址管理</text>
+      </view>
+      <view class="meniuItem" bindtap="goQuestion">
+        <image src="../public/quertion.png"></image>
+        <text>用户帮助</text>
+      </view>
+      <!-- bindtap="goservice" -->
+      <view class="meniuItem contactBox" >
+       <button class="contactBtn" open-type="contact" bindcontact="handleContact"></button>
+        <image src="../public/kefu.png"></image>
+        <text>联系我们</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+ <view class="bgc"  wx:if="{{userFlag}}"></view>
+<view class="loginbtn" wx:if="{{userFlag}}">
+
+  <view class="logintitle">授权车道善</view>
+  <view class="loginImg"><image src="../public/login.jpg"></image></view>
+  <view class="loginMsg">需要微信授权后登录</view>
+  <view class="loginMsg1">登录后可以体验更多功能哦</view>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInformation">登录</button>
+</view>
+
+<view class="copyright">
+  <view>Copyright@2019-2029</view>
+  <view>杭州中士网络科技有限公司版权所有</view>
+</view>

@@ -1,0 +1,30 @@
+<view class="contenner">
+  <view class="address">
+    <view wx:if="{{addressItem.length == 0}}" class="orderNone">
+      <image src="../public/addnone.png"></image>
+      <view>地址还是空的</view>
+    </view>
+    <view class="addressItem" wx:for="{{addressItem}}" data-index="{{index}}" bindtap="{{needAdd?'backAdd':''}}">
+      <view class="addressheader">
+        <text class="addressName">{{item.name}}</text>
+        <text class="addressPhone">{{item.phone}}</text>
+      </view>
+      <view class="addressMsg">{{item.address}}</view>
+      <view class="addressPlay">
+        <view class="addleft" data-status="{{item.status}}" data-id="{{item.id}}" catchtap="{{item.status==1?'':'checkImg'}}">
+          <image class="checkimg" src="{{item.status == 0?'../public/nocheck.png':'../public/check.png'}}"></image>
+          <text>设为默认地址</text>
+        </view>
+        <view class="addright">
+          <text catchtap="goUpdataAdd" data-item="{{item}}">编辑</text>
+          <text catchtap="deletAddress" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="postBtn" bindtap="goNewaddress">
+  <button class="btn">新建地址</button>
+</view>

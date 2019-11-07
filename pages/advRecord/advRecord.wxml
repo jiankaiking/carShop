@@ -1,0 +1,19 @@
+<view class="advRecord">
+  <view wx:if="{{advRecors.length == 0}}" class="orderNone">
+    <image src="../public/addnone.png"></image>
+    <view>广告记录还是空的</view>
+  </view>
+  <view class="advRecordcont">
+    <view class="advRecordItem" wx:for="{{advRecors}}" wx:key="{{index}}">
+      <view class="advTime">{{item.createTime}}</view>
+      <view class="advRecordDate">
+        <text>投放时间</text>
+        <text>{{item.startDate}}至{{item.endDate}} </text>
+      </view>
+      <view class="advStatus">
+        <text>投放中</text>
+
+      </view>
+    </view>
+  </view>
+</view>

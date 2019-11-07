@@ -1,0 +1,26 @@
+<view class="contanner">
+  <view class="storeMsg">
+    <view class="storemsgImg">
+      <image src="{{domain}}{{storeMsg.img}}"></image>
+    </view>
+    <view class="storeMsgtext">
+      <view class="storemsgName">{{storeMsg.name}}</view>
+      <view class="storemsgAddress">{{storeMsg.address}}</view>
+      <view class="storemsgPhone">门店电话：{{storeMsg.contact}}</view>
+      <view class="storemsgMonet">会员折扣立减{{storeMsg.memberDiscount}}元</view>
+    </view>
+  </view>
+  <view class="recommendBox">
+    <view class="recommendTitle">
+       <view class="recommendimg"><image src="../public/preleft.png"></image></view>
+       <view class="textCommend">免费推荐</view>
+       <view class="recommendimg"> <image src="../public/preright.png"></image></view>
+    </view>
+    <view class="recommendNav">
+       <view class="recommendItem" wx:for="{{recommendItem}}" wx:key="{{index}}" bindtap="goproduct" data-id="{{item.id}}">
+          <image class="producImg" src="{{domain}}{{item.detail}}"></image>
+          <view class="itemName">{{item.title}}</view>
+       </view>
+    </view>
+  </view>
+</view>

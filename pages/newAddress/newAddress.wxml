@@ -1,0 +1,24 @@
+<view class="contenner">
+  <view class="optionsList">
+     <view class="optionsItem">
+        <input placeholder="省份、城市、县区" bindinput="getCity" value="{{city}}"></input>
+     </view>
+     <view class="optionsItem">
+        <input placeholder="详细地址，街道、楼牌号等" bindinput="getaddress" value="{{address}}"></input>
+     </view>
+     <view class="optionsItem">
+        <input placeholder="姓名" bindinput="getName" value="{{name}}"></input>
+     </view>
+     <view class="optionsItem">
+        <input placeholder="手机号码" bindinput="getPhone" value="{{phone}}"></input>
+     </view>
+     <view class="optionsItem flexitem"  wx:if="{{ fromFlage==1}}" bindtap="chuanggeStatus">
+        <input placeholder="设为默认地址" disabled="disabled"></input>
+        <image class="checkimg" src="{{status == 0?'../public/nocheck.png':'../public/check.png'}}"></image>
+     </view>
+  </view>
+</view>
+<view class="postBtn">
+  <button class="btn" bindtap="upDateAdd">保存地址</button>
+</view>
+

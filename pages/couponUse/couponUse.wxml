@@ -1,0 +1,19 @@
+<view class="orderContenner">
+  <view class="couponList">
+    <view class="couponListItem" wx:for="{{couponNav}}" wx:key="{{index}}" data-index="{{index}}" bindtap="optionsCoupon">
+      <view class="itemCenter">
+        <view>
+          <view class="text">{{item.name}}</view>
+          <view class="time">{{item.startDate}}至{{item.endDate}}</view>
+        </view>
+        <view>
+          <view class="text red">¥{{item.money}}</view>
+          <view class="time yellow">满{{item.moneyCondition}}可用</view>
+        </view>
+      </view>
+      <view class="itemButtom">
+        <view class="commsg">限波士卡汽车专业换油店使用</view>
+      </view>
+    </view>
+  </view>
+</view>

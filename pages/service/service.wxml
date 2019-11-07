@@ -1,0 +1,6 @@
+<view class="servicepage">
+   <view class="serviceoagecont">
+     <image src="{{img == null?'../public/cart.png':domain + '/' + img}}"></image>
+     <view>用户扫描二维码即可联系客服</view>
+   </view>
+</view>

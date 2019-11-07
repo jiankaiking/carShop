@@ -1,0 +1,22 @@
+<view class="sale">
+  <view class="saleContent">
+    <view class="salebox" bindtap="gosalemsg" data-type="1">
+      <view class="saleMoney">
+        <image src="../public/salemoney.png"></image>
+        <view class="textMsg borderView">
+          <text>退款</text>
+          <text>未收到货物，与卖家协商退款</text>
+        </view>
+      </view>
+    </view>
+    <view class="salebox" bindtap="gosalemsg" data-type="2">
+      <view class="saleMoney">
+        <image src="../public/salemoney2.png"></image>
+        <view class="textMsg">
+          <text>退货退款</text>
+          <text>已收到货，需退还货物</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

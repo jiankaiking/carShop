@@ -1,0 +1,48 @@
+<view class="orderContenner">
+  <view class="orderTop">
+    <view class="orderNav">
+      <view class="orderItem {{navIndex == 0?'active':''}}" data-index="0" bindtap="getIndex">可使用</view>
+      <view class="orderItem {{navIndex == 1?'active':''}}" data-index="1" bindtap="getIndex">已使用</view>
+      <view class="orderItem {{navIndex == 2?'active':''}}" data-index="2" bindtap="getIndex">已过期</view>
+    </view>
+  </view>
+  <view class="couponList">
+    <!-- <view class="couponListTitle">可使用卡包(3张)</view>
+    <view class="couponListItem">
+      <view class="itemTop">
+        <view class="text">马驰宝迈跑机油5W-60玛莎</view>
+      </view>
+      <view class="itemCenter">
+        <view class="time">2019-08-07至2019-08-21</view><view class="showE"><button>展示二维码</button></view>
+      </view>
+      <view class="itemButtom">
+        <view class="commsg">限波士卡汽车专业换油店使用</view>
+      </view>
+    </view> -->
+  </view>
+  <view class="couponList">
+    <view class="couponListTitle" wx:if="{{navIndex == 0}}">可使用优惠券({{couponItem.length}}张)</view>
+    <view class="couponListTitle" wx:if="{{navIndex == 1}}">已使用优惠券({{couponItem.length}}张)</view>
+    <view class="couponListTitle" wx:if="{{navIndex == 2}}">已过期优惠券({{couponItem.length}}张)</view>
+    <view class="couponListItem {{navIndex == 0?'':'bgc'}}" wx:for="{{couponItem}}" wx:key="{{index}}">
+      <view class="cMsg">
+        <view class="itemTop">
+          <view class="text {{navIndex == 0?'':'textH'}}">{{item.personCoupon.name}}</view>
+          <view class="time {{navIndex == 0?'':'timeH'}}">{{item.personCoupon.startDate + '至' + item.personCoupon.endDate }}</view>
+
+        </view>
+        <view class="conpRight">
+          <view class="itemCenter" wx:if="{{navIndex == 0}}">
+            <view class="price">{{item.personCoupon.money}}</view>
+            <view class="monney">{{item.personCoupon.moneyCondition}}</view>
+          </view>
+          <button class="userCoupon" wx:if="{{navIndex == 1}}">已使用</button>
+          <text class="userText" wx:if="{{navIndex == 2}}">已过期</text>
+        </view>
+      </view>
+      <view class="itemButtom">
+        <view class="commsg {{navIndex == 0?'':'commsgH'}}">限{{item.shop.name}}使用</view>
+      </view>
+    </view>
+  </view>
+</view>

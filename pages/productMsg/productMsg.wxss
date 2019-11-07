@@ -1,0 +1,809 @@
+/* pages/productMsg/productMsg.wxss */
+
+.productMsg {
+  width: 100%;
+  padding-bottom: 98rpx;
+}
+
+.productTop {
+  border-bottom: 16rpx solid #f5f5f5;
+}
+
+.productSwriper {
+  width: 100%;
+  background: #fff;
+  height: 750rpx;
+}
+
+.swiper {
+  height: 750rpx;
+}
+
+.pjectMsg {
+  padding-left: 30rpx;
+}
+
+.proImgmsg image {
+  width: 100%;
+  height: 750rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 750rpx;
+}
+
+.productText {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.productName {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.productsmall {
+  font-size: 24rpx;
+  color: #949494;
+  padding: 15rpx 0 30rpx;
+}
+
+.nowPrice {
+  color: #fe0502;
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-right: 16rpx;
+}
+
+.afterPrice {
+  color: #999;
+  font-size: 28rpx;
+  text-decoration: line-through;
+}
+
+.productBot {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 16rpx solid #f5f5f5;
+}
+
+.tickettitle image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 8rpx;
+}
+
+.tickettitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.tickettitle text {
+  color: #202020;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.ticketRule view {
+  color: #333;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+
+.posifixBot {
+  box-shadow: 0px -1px 6rpx rgba(0, 0, 0, 0.15);
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 98rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posifixBot image {
+  width: 74rpx;
+  height: 74rpx;
+  margin-left: 5rpx;
+  margin-right: 17rpx;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  color: #333;
+  width: 226rpx;
+  height: 80rpx;
+  box-shadow: 0px 0px 6rpx rgba(199, 199, 199, 0.5);
+  border-radius: 40rpx;
+}
+
+.postMsg image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.rightBtn {
+  width: 434rpx;
+  height: 80rpx;
+}
+
+.rightBtn .savebtn {
+  width: 100%;
+  height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  border-radius: 40rpx;
+}
+
+.postTitle {
+  position: absolute;
+  width: 434rpx;
+  height: 80rpx;
+  background: linear-gradient(360deg, rgba(179, 179, 179, 1) 0%, rgba(220, 220, 220, 1) 100%);
+  border-radius: 40rpx;
+  right: 30rpx;
+  top: -110rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.backbtn {
+  position: fixed;
+  width: 60rpx;
+  height: 60rpx;
+  left: 30rpx;
+  top: 60rpx;
+  z-index: 99;
+}
+
+.backbtn image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.shakeView {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.postMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50rpx 0;
+}
+
+.postMsg view {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.btnCont {
+  width: 100%;
+}
+
+button::after {
+  border: none;
+  border-radius: none;
+}
+
+.btnCont button {
+  width: 100%;
+  color: #999;
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: #e3e3e3 1px solid;
+}
+
+.bgc {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.titlemsg {
+  width: 100%;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.titlemsg text:first-child {
+  color: #fe0502;
+}
+
+.buttonTwo {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 6rpx rgba(0, 0, 0, 0.15);
+}
+
+.butcont {
+  width: 100%;
+  padding: 10rpx 0;
+  opacity: 1;
+  display: flex;
+}
+
+.butcont button {
+  flex: 1;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 6rpx rgba(0, 0, 0, 0.15);
+}
+
+.cargoing {
+  color: #333;
+  font-size: 32rpx;
+  border-radius: 40rpx 0px 0px 40rpx;
+  background: #fff;
+}
+
+.truepay {
+  border-radius: 0px 40rpx 40rpx 0px;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.showProject {
+  position: fixed;
+  z-index: 12;
+  background: #fff;
+  width: 100%;
+  bottom: 0;
+}
+
+.showBox {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.showBoxScroll {
+  width: 100%;
+  height: 750rpx;
+  overflow-y: scroll;
+}
+
+.showimg, .showimg image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.projectright {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.projectright image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.showimg {
+  margin-right: 20rpx;
+}
+
+.showtopText {
+  display: flex;
+  justify-content: space-between;
+  padding: 9rpx 0;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.showtopText view:first-child {
+  color: #fe0502;
+  font-size: 44rpx;
+}
+
+.showtopText view:last-child, .projectVolumname, .projectNumtitle {
+  color: #333;
+  font-size: 32rpx;
+}
+
+.showtop {
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectleft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.projectVolum {
+  width: 100%;
+  border-bottom: 1px solid #f5f5f5;
+  margin-top: 67rpx;
+  padding-bottom: 42rpx;
+}
+
+.volumList {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.volumItem {
+  width: 101rpx;
+  height: 56rpx;
+  background: #f1f1f1;
+  border: 1px solid transparent;
+  text-align: center;
+  line-height: 56rpx;
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+
+.projectNum {
+  margin: 55rpx 0 100rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numoption {
+  display: flex;
+  justify-content: flex-end;
+  height: 56rpx;
+  border: 1px solid rgba(227, 227, 227, 1);
+}
+
+.prevb {
+  background: rgba(241, 241, 241, 1);
+  color: #999;
+  font-size: 36rpx;
+  width: 56rpx;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+}
+
+.prevNum {
+  width: 93rpx;
+  background: #fff;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  height: 56rpx;
+  text-align: center;
+}
+
+.projectStore {
+  width: 100%;
+  padding: 30rpx 0 42rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.projectNumtitle {
+  margin-bottom: 38rpx;
+}
+
+.selecStore {
+  padding: 0 16rpx;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  height: 56rpx;
+  color: hsl(0, 0%, 40%);
+  font-size: 28rpx;
+}
+
+.selecStore image {
+  width: 15rpx;
+  height: 26rpx;
+}
+
+.routerWayItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.routerWayItem view {
+  color: #666;
+  font-size: 28rpx;
+  width: 144rpx;
+  height: 56rpx;
+  background: #f1f1f1;
+  text-align: center;
+  line-height: 56rpx;
+  margin-right: 30rpx;
+  border: 1px solid transparent;
+}
+
+.addCarbtn {
+  width: 100%;
+  height: 98rpx;
+}
+
+.addCarbtn button {
+  height: 80rpx;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+}
+
+.storeItem {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30rpx;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+}
+
+.storeItem image {
+  width: 156rpx;
+  height: 156rpx;
+  flex-shrink: 1;
+}
+
+.imgLeft {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 16rpx;
+}
+
+.storeMsgName {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+.storeMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.storeMsgAddress {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.storeOPtions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  z-index: 102;
+  background: #fff;
+  box-shadow: 0px -3px 6px rgba(191, 191, 191, 0.5);
+}
+
+.volumList view.active, .routerWayItem view.active {
+  background: rgba(59, 87, 255, 0.3);
+  border: 1px solid rgba(59, 87, 255, 1);
+  color: #3b57ff;
+}
+
+.storeAddress, .optionstitle {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 50rpx;
+}
+
+.optionsnav {
+  width: 100%;
+  margin-top: 15rpx;
+}
+
+.timeer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 17rpx 0;
+}
+
+.timerImg {
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+}
+
+.phoneImg {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+}
+
+.optionsMsg {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333;
+}
+
+.changePadding {
+  width: 100%;
+}
+
+.bindaddress {
+  width: 96%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 5rpx rgba(0, 0, 0, 0.12);
+  border-radius: 8rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.addressBox {
+  width: 96%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 5rpx rgba(0, 0, 0, 0.12);
+  border-radius: 8rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.addressBox-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+
+.addressName {
+  color: #333;
+  font-size: 36rpx;
+  margin-right: 50rpx;
+  font-weight: 600;
+}
+
+.addressPhone {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addressMsg {
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.rightImg {
+  width: 18rpx;
+  height: 31rpx;
+  padding-left: 50rpx;
+}
+
+.rightImg image {
+  width: 18rpx;
+  height: 31rpx;
+}
+
+.tableTop {
+  width: 98%;
+  margin: 0 auto;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  border-radius: 8rpx;
+}
+
+.store {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storeimg {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 16rpx;
+}
+
+.storeimg image {
+  width: 156rpx;
+  height: 156rpx;
+}
+
+.storerightimg {
+  width: 18rpx;
+  height: 32rpx;
+  align-self: center;
+  margin-left: 30rpx;
+}
+
+.storerightimg image {
+  width: 18rpx;
+  height: 32rpx;
+}
+
+.storetext {
+  display: flex; width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.storeName {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.storeAddress, .optionstitle {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 50rpx;
+}
+
+.writeBox {
+  z-index: 106;
+  position: fixed;
+  top: 50%;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: -126rpx;
+}
+
+.writeCont {
+  height: 252rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15rpx rgba(0, 0, 0, 0.16);
+  border-radius: 8rpx;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.writeItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70rpx;
+}
+
+.writeItem text {
+  margin-right: 100rpx;
+  width: 115rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.writeTime {
+  padding: 12rpx 0;
+}
+
+.trueInput {
+  display: flex;
+  border-top: 1px solid #e3e3e3;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputButton {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.inputButton text {
+  padding-top: 25rpx;
+  display: inline-block;
+}
+
+.inputButton text:nth-child(2) {
+  margin-left: 60rpx;
+}
+
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.estimate {
+  width: 100%;
+  padding: 30rpx 30rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.esmitameBox {
+  width: 100%;
+  padding: 30rpx 0 20rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #e3e3e3;
+}
+
+.esTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 30rpx;
+}
+
+.esimage {
+  padding: 15rpx 0;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.esTime {
+  color: #999;
+  padding-top: 20rpx;
+  font-size: 26rpx;
+}
+
+.esname {
+  color: #666;
+  font-size: 26rpx;
+}
+
+.esifile {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.esifile image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}

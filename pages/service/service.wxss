@@ -1,0 +1,7 @@
+/* pages/service/service.wxss */
+.servicepage{ width: 100%; padding: 120rpx 60rpx; box-sizing: border-box; }
+.serviceoagecont{ padding: 60rpx;box-sizing: border-box;box-shadow:0px 0px 10rpx rgba(0,0,0,0.16);
+opacity:1;
+border-radius:16rpx;}
+.serviceoagecont image{ width: 510rpx; height: 510rpx;}
+.serviceoagecont view{ color: #333333; font-size: 28rpx; margin-top: 30rpx;}

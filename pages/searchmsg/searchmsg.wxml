@@ -1,0 +1,42 @@
+<view class="searchPage">
+  <view class="searchTop">
+    <view class="postFixed">
+      <view class="searchBarCenter">
+        <view class="searchImg">
+          <image src="../public/search.png"></image>
+        </view>
+        <view class="inputSearch">
+          <input placeholder="车用机油" value="{{searchValue}}" bindinput="getSearchValue"></input>
+        </view>
+      </view>
+      <view class="searchBtn" bindtap="goShopcar">
+        <image src="../public/carshop.png"></image>
+        <text>购物车</text>
+      </view>
+    </view>
+
+    <view class="searchBar">
+      <scroll-view scroll-x="true" class="scrollview">
+        <view class="scrollItem {{tabIndex==index?'active':''}}" wx:for="{{tabNav}}" data-index="{{index}}" wx:key="{{index}}" bindtap="tabBind">{{item.name}}</view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="proSwiper">
+      <view class="storeMsgNav">
+        <view class="storeMsgitem" wx:for="{{productItem}}" data-index="{{index}}" wx:key="{{index}}" bindtap="goGoodsmsg">
+          <view class="goodsImg">
+          <image  class="proImg" src="{{domain + '/sys/common/view/' + item.coverImg}}"></image></view>
+          <view class="rightCont">
+            <view class="proName">{{item.title}}</view>
+            <view class="btnCont">
+              <button class="sharkBtn">分享</button>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+  <view wx:if="{{productItem.length == 0}}" class="orderNone">
+       <image src="../public/ordernone.png"></image>
+       <view>搜索不到此关键字</view>
+    </view>
+</view>

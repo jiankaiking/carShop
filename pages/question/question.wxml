@@ -1,0 +1,16 @@
+<view class="quistionBox">
+  <view class="quistTitle">
+    <view>常见问题</view>
+  </view>
+  <view class="quistNav">
+    <view class="quistItem  {{index == aindex?'height':''}}"  data-aindex="{{index}}" bindtap="openAticr" wx:for="{{msg}}" wx:key="{{index}}" data-falge="{{item.flage}}">
+      <view class="quistItemTitle">
+        <view class="quiTitletext">{{item.theme}}</view>
+        <image src="../public/down.png" class=" {{item.flage?'transImg':''}}"></image>
+      </view>
+      <view class="quistMsg   {{item.flage?'opc':''}}">
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+</view>

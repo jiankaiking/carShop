@@ -1,0 +1,45 @@
+/* pages/paysuccess/paysuccess.wxss */
+
+.content {
+  width: 100%;
+  margin-top: 60rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.centerbox {
+  width: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
+.titlemsg {
+  padding: 0 65rpx;
+  box-sizing: border-box;
+  color: #797979;
+  font-size: 28rpx;
+}
+
+.titlemsg text {
+  color: #fe0502;
+}
+
+.btnCont {
+  display: flex;
+
+  padding: 0 60rpx 80rpx;
+  box-sizing: border-box;
+  justify-content: space-between; margin-top: 50rpx; 
+}
+
+.goOrderMsg {
+  width: 216rpx;
+  height: 80rpx;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  color: #fff;border-radius:44rpx; font-size: 28rpx; line-height: 80rpx;
+}
+.successImg{ padding-top: 36rpx; display: flex; align-items: center; flex-direction: column; margin-bottom: 50rpx;}
+.successImg image{ width: 178rpx; height: 235rpx}
+.successImg text{ color: #3B57FF; font-size: 36rpx;}
+

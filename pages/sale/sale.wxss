@@ -1,0 +1,10 @@
+/* pages/sale/sale.wxss */
+.sale{ width: 100%;}
+.saleContent{ width: 100%; border-top: 16rpx solid #F5F5F5;border-bottom: 16rpx solid #F5F5F5}
+.borderView{border-bottom: 1px solid #E3E3E3}
+.saleMoney{ display: flex; justify-content: flex-start; align-items: center;  box-sizing: border-box;}
+.saleMoney image{ width: 90rpx; height: 90rpx; flex-shrink: 1; padding: 30rpx;}
+/* .salebox{padding: 0 30rpx; box-sizing: border-box;} */
+.textMsg{ display: flex; justify-content: flex-start; flex-direction: column;padding:30rpx 0; text-align: left; width: 75%;  }
+.textMsg text:first-child{ color: #333; font-size: 32rpx; padding-bottom: 16rpx;}
+.textMsg text:last-child{ color: #999; font-size: 24rpx;}

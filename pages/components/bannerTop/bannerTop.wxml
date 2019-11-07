@@ -1,0 +1,31 @@
+<view class="shopCont">
+    <view class="shopTitle">
+      <image src="../../public/preleft.png"></image>
+      <text>分享得好礼</text>
+      <image src="../../public/preright.png"></image>
+    </view>
+    <view class="storeList">
+      <view class="storeCont {{fixdFlage?'postTop':''}}">
+        <view 
+           wx:for="{{navTitle}}" wx:key="{{index}}"
+           data-id="{{item.id}}"
+           class="storeName {{itemIndex == index?'active':''}}" 
+           bindtap="itemTable" data-index="{{index}}">{{item.name}}</view>
+      </view>
+    </view>
+      <!--  推荐 -->
+
+        <view class="storeMsgNav">
+          <scroll-view scroll-y style="height:700rpx;">
+            <view class="storeMsgitem" wx:for="{{itemNav0}}" wx:key="{{index}}"  bindtap="goStore" data-id="{{item.id}}">
+              <view class="goodImg"><image class="proImg" src="{{domain + '/sys/common/view/' + item.coverImg}}">></image></view>
+              <view class="rightCont">
+                <view class="proName">{{item.title}}</view>
+                <view class="btnCont">
+                  <button class="sharkBtn">分享</button>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+  </view>

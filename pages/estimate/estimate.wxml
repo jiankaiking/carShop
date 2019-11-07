@@ -1,0 +1,39 @@
+<view class="estimate">
+  <view class="estimateStart">
+    <view class="startMsg">
+      <view class="startTitle">星级评价</view>
+      <view class="starttext">评价你认为的商品星级</view>
+      <view class="start">
+        <image src="{{len >= 1?startLink:startUrl}}" data-index="1" bindtap="imgTap"></image>
+        <image src="{{len >= 2?startLink:startUrl}}" data-index="2" bindtap="imgTap"></image>
+        <image src="{{len >= 3?startLink:startUrl}}" data-index="3" bindtap="imgTap"></image>
+        <image src="{{len >= 4?startLink:startUrl}}" data-index="4" bindtap="imgTap"></image>
+        <image src="{{len >= 5?startLink:startUrl}}" data-index="5" bindtap="imgTap"></image>
+      </view>
+    </view>
+    <view class="context">
+      <view class="startTitle">内容评价</view>
+      <view class="starttext">
+         <textarea bindinput="bindtext" placeholder="宝贝满足你的期望吗？说说你的使用心得，分享给想用的他们吧"></textarea>
+      </view>
+      <view class="addImg">
+        <view class="addItemFirst">
+          <image wx:for="{{imgContUrl}}" src="{{domain + '/sys/common/view/' + item}}"></image>
+
+        </view>
+        <view class="addItem" bindtap="addImg">
+          <image src="../public/camer.png"></image>
+          <text>添加图片</text>
+        </view>
+        <video wx:if="{{vidos != null}}" src="{{domain + '/sys/common/view/' + vidos}}"></video>
+        <view class="addItem" bindtap="addVideo">
+          <image src="../public/camer.png"></image>
+          <text>添加视频</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="saveBtn">
+    <button class="btn" bindtap="addEsmit">提交</button>
+  </view>
+</view>

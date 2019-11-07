@@ -1,0 +1,60 @@
+<view class="shoppingContenner">
+  <view class="topbtn" bindtap="checkAdmin">
+    <button class="adminBtn">{{admin?'完成':'管理'}}</button>
+  </view>
+  <view class="storeBox">
+  <view wx:if="{{goodsItem.length == 0}}" class="orderNone">
+       <image src="../public/ordernone.png"></image>
+       <view>订单还是空的</view>
+    </view>
+    <view class="storeItem" wx:for="{{goodsItem}}"  bindtap="checkedBtn" wx:key="{{index}}" data-index="{{index}}">
+      <view class="shoppflage" data-index="{{index}}">
+        <image src="{{item.falge?'../public/check.png':'../public/nocheck.png'}}"></image>
+      </view>
+      <view class="goodBox">
+        <view class="goodStore">
+           <image src="../public/store.png"></image><view class="storeNametitle">{{item.shopName}}</view>
+        </view>
+        <view class="storeMsg">
+          <view class="storeimg">
+            <image src="{{domain}}{{item.goodImg}}"></image>
+          </view>
+          <view class="storeCont">
+            <view class="storemsgtop">
+              <text class="storeName">{{item.goodName}}</text>
+              <text class="storeNum">x{{item.goodNum}}</text>
+            </view>
+            <view class="address">
+              <text>{{item.address}}</text>
+            </view>
+            <view class="storeBom">
+              <view class="volum">{{item.goodSpecification}}</view>
+              <view class="price">¥{{item.price}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="typeorder">
+           <text wx:if="{{item.type == 1}}">快递邮寄</text>
+           <text wx:if="{{item.type == 2}}">门店自提</text>
+           <text wx:if="{{item.type == 3}}">送货上门</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="postBtn">
+  <view class="check" bindtap="allcheck">
+    <image src="{{allCheck?'../public/check.png':'../public/nocheck.png'}}"></image>
+    <text>全选</text>
+  </view>
+  <view class="paybtn">
+    <view class="paymonney" wx:if="{{!admin}}">
+      <view>合计：
+        <text>{{aggregate}}</text>
+      </view>
+    </view>
+    <button class="paysave" bindtap="{{admin?'deleteCart':'gopay'}}">{{admin?'删除':'结算'}}</button>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="content">
+  <view class="centerbox">
+    <view class="successImg">
+      <image src="../public/success.png"></image>
+      <text>订单支付成功</text>
+    </view>
+    <view class="titlemsg">该商品为<text>订单商品</text>,请使用者在优惠券系统中 查看
+    </view>
+    <view class="btnCont">
+      <button class="goOrderMsg" bindtap="goOrdermsg">查看订单</button><button class="goOrderMsg" bindtap="goIndex">返回首页</button>
+    </view>
+  </view>
+</view>

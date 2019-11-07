@@ -1,0 +1,314 @@
+.searchTab {
+  width: 100%;
+  height: 400rpx;
+  background:linear-gradient(180deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+  border-bottom-left-radius: 150rpx;
+  border-bottom-right-radius: 150rpx;
+  color: #fff;
+  position: relative;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.searchTop {
+  width: 100%;
+  height: 68rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.searchBarLeft {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.searchBarCenter {
+  width: 438rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-size: 24rpx;
+}
+
+.searchBarRight {
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.inputSearch {
+  width: 400rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+.inputSearch input {
+  width: 350rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #333;
+}
+
+.searchBarLeft image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.searchBarCenter image {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 8rpx 0 18rpx;
+}
+
+.searchBarRight image {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.prevConnte {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  position: absolute;
+  bottom: -30rpx;
+  width: 100%;
+  height: 300rpx;
+  left: 0;
+  right: 0;
+}
+
+.banner {
+ background: #fff;
+  width: 100%;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.banner .wx-swiper-dot {
+  width: 40rpx;
+  border-radius: 3rpx;
+  height: 5rpx;
+  display: inline-flex;
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+
+.banner image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.prodct {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 100%;
+  height: 520rpx;
+  left: 0;
+  right: 0;
+  margin-top: 100rpx;
+}
+
+.prodctbanner {
+  background: #fff;
+  width: 100%;
+  border-radius: 12rpx;
+  overflow: hidden; position: relative;
+
+}
+.prev view {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 50%;
+  margin-top: -25rpx;
+  z-index: 999;
+}
+
+.prev image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.leftPrev {
+  left: 20rpx;
+}
+
+.rightPrev {
+  right: 20rpx;
+}
+.swiperBox {
+  width: 100%;
+  height: 520rpx;
+}
+
+.swiperBox image {
+  width: 100%;
+  height: 520rpx;
+}
+
+.shopCont {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.shopTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}
+
+.shopTitle image {
+  width: 32rpx;
+  height: 17rpx;
+}
+
+.shopTitle text {
+  color: #3B57FF;
+  font-size: 36rpx;
+  margin: 0 16rpx;
+  font-weight: 600;
+}
+
+.storeList {
+  width: 100%;
+}
+
+.storeItem {
+  width: 100%;
+  height: 156rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 60rpx;
+}
+
+.storeItem image {
+  width: 156rpx;
+  height: 156rpx;
+  flex-shrink: 1;
+}
+
+.imgLeft {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 16rpx;
+}
+
+.storeMsgName {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+.storeMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.storeMsgAddress {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.storeMsg::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2rpx;
+  background: #e3e3e3;
+  bottom: -30rpx;
+  left: 0;
+  right: 0;
+}
+
+.storeList {
+  width: 100%;
+  margin: 30rpx 0;
+  height: 55rpx;
+}
+
+.storeCont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.storeName {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 14rpx 0;
+  font-size: 26rpx;
+}
+
+.active {
+  background:linear-gradient(270deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+  color: #fff;
+  border-radius: 35rpx;
+}
+
+.storeMsgNav {
+  width: 100%;
+}
+
+.proImg {
+  width: 210rpx;
+  height: 210rpx;
+ 
+}
+
+.storeMsgitem {
+  display: flex;
+  justify-content:  flex-start;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+.goodImg{ width: 210rpx; height: 210rpx; margin-right: 16rpx;}
+.storeMsgitem::after {
+  position: absolute;
+  content: "";
+  width: 518rpx;
+  height: 1px;
+  bottom: 15rpx;
+  right: 0;
+  background: #e3e3e3;
+}
+
+.rightCont {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; width: 460rpx;
+}
+
+.sharkBtn {
+  width: 120rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #fff;
+  font-size: 30rpx;
+  background:linear-gradient(270deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+  border-radius: 40rpx;
+  margin: 0;
+}
+
+.btnCont {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.proName {
+  color: #333;
+  font-size: 32rpx;
+}
+.postTop{ box-shadow:0px 0px 10px rgba(0,0,0,0.16); position: fixed; top: 0;left: 0; right: 0; background: #fff; z-index: 99; padding: 20rpx 30rpx; box-sizing: border-box;}

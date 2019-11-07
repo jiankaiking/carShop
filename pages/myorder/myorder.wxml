@@ -1,0 +1,62 @@
+<view class="orderContenner">
+  <view class="orderTop">
+    <view class="orderNav">
+      <view class="orderItem {{navIndex == 20?'active':''}}" data-index="20" bindtap="getIndex">全部</view>
+      <view class="orderItem {{navIndex == 0?'active':''}}" data-index="0" bindtap="getIndex">待付款</view>
+      <view class="orderItem {{navIndex == 11?'active':''}}" data-index="11" bindtap="getIndex1">待发货</view>
+      <view class="orderItem {{navIndex == 1?'active':''}}" data-index="1" bindtap="getIndex">待服务</view>
+      <view class="orderItem {{navIndex == 3?'active':''}}" data-index="3" bindtap="getIndex">待收货</view>
+      <view class="orderItem {{navIndex == 4?'active':''}}" data-index="4" bindtap="getIndex">待评价</view>
+      <view class="orderItem {{navIndex == 5?'active':''}}" data-index="5" bindtap="getIndex">售后</view>
+    </view>
+  </view>
+  <view class="storeBox">
+    <view wx:if="{{goodsItem.length == 0}}" class="orderNone">
+      <image src="../public/ordernone.png"></image>
+      <view>订单还是空的</view>
+    </view>
+    <view class="storeItem" wx:for="{{goodsItem}}" wx:key="{{index}}" data-index="{{index}}" data-id="{{item.salesOrder.id}}" bindtap="goOrderMsg">
+      <view class="itemTopbox">
+        <view class="storeMsg">
+          <view class="storeimg">
+            <image src="{{domain + '/sys/common/view/' + item.salesOrderDetail.goodImg}}"></image>
+          </view>
+          <view class="storeCont">
+            <view class="storemsgtop">
+              <text class="storeName">{{item.salesOrderDetail.goodName}}</text>
+              <text class="storeNum">x{{item.salesOrderDetail.goodNum}}</text>
+            </view>
+            <view class="storeAddress">
+              <text>{{item.salesOrder.address}}</text>
+            </view>
+            <view class="storeBom">
+              <view class="volum">{{item.salesOrderDetail.goodSpecification}}</view>
+              <view class="price">¥{{item.salesOrder.payAmount}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="lastTime" wx:if="{{item.salesOrder.status == 0}}">剩余支付时间
+        <text>{{item.salesOrder.left_time}}</text>
+      </view>
+      <view class="playOrder">
+        <view>
+          <text wx:if="{{item.salesOrder.type == 1}}">快递邮寄</text>
+          <text wx:if="{{item.salesOrder.type == 2}}">门店邮寄</text>
+          <text wx:if="{{item.salesOrder.type == 3}}">送货上门</text>
+        </view>
+        <view class="botRight">
+          <button class="paybtn" catchtap="truePay" wx:if="{{item.salesOrder.status == 0}}" data-index="{{index}}">去支付</button>
+          <text wx:if="{{item.salesOrder.status == 1 && item.salesOrder.type == 1}}">待发货</text>
+          <text wx:if="{{item.salesOrder.status == 1 && item.salesOrder.type != 1}}">待服务</text>
+          <button wx:if="{{item.salesOrder.status != 8 &&item.salesOrder.status != 0 && item.salesOrder.status != 7 && item.salesOrder.status != 6}}" class="truegoodsa" data-id="{{item.salesOrder.id}}" catchtap="gosalem">申请售后</button>
+          <button wx:if="{{item.salesOrder.status == 3}}" data-index="{{index}}" class="truegoods" catchtap="trueOrder">确认收货</button>
+          <button wx:if="{{item.salesOrder.status == 4}}" data-index="{{index}}" class="truegoods" catchtap="esmitBtn">去评价</button>
+          <text wx:if="{{item.salesOrder.status == 6}}">售后中</text>
+          <text wx:if="{{item.salesOrder.status == 7}}">已完成</text>
+          <text wx:if="{{item.salesOrder.status == 8}}">售后完成</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

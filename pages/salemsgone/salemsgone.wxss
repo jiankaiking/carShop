@@ -1,0 +1,206 @@
+.reimburse {
+  width: 100%;
+  padding-bottom: 98rpx;
+}
+
+.productMsg {
+  width: 100%;
+  padding: 50rpx 30rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.porImage {
+  width: 156rpx;
+  height: 156rpx;
+  margin-right: 16rpx;
+}
+
+.porImage image {
+  width: 156rpx;
+  height: 156rpx;
+}
+
+.textMsg {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.proTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.proName {
+  color: #333;
+  font-size: 28rpx;
+}
+
+.proNum {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 30rpx;
+}
+
+.proBom {
+  width: 86rpx;
+  height: 32rpx;
+  background: #f1f1f1;
+  color: #666;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+
+.reimburseMoney {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 16rpx solid #f5f5f5;
+  border-top: 16rpx solid #f5f5f5;
+}
+
+.reimburseCont {
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  width: 100%;
+}
+
+.reimburseCont text {
+  color: #333;
+}
+
+.reimburseCont text.money {
+  color: #fe0502;
+}
+
+.cause {
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.causeTitle {
+  padding-bottom: 30rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.textareaMsg {
+  font-size: 28rpx;
+  color: #999;
+  height: 250rpx;
+}
+
+.textareaMsg textarea {
+  width: 100%;
+  height: 250rpx;
+}
+
+.reimburseImg {
+  border-top: 16rpx solid #f5f5f5;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.causeTitle {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.causeTitle text {
+  color: #999;
+}
+
+.saveBtn {
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 100%;
+  height: 88rpx;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  border-radius: 44rpx;
+  color: #fff;
+  line-height: 88rpx;
+}
+
+.img {
+  width: 158rpx;
+  height: 158rpx;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(227, 227, 227, 1);
+  justify-content: center;
+}
+
+.img image {
+  width: 51rpx;
+  height: 44rpx;
+}
+
+.addImg {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50rpx;
+  flex-wrap: wrap;
+}
+
+.addItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50rpx;
+}
+
+.addItem image {
+  width: 120rpx;
+  height: 120rpx;
+  padding-bottom: 20rpx;
+}
+
+.addItem text {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.addItemFirst {
+  display: flex;
+  justify-content: flex-start;
+  height: 158rpx;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.rightTop {
+  position: absolute;
+  right: 13rpx;
+  top: -13rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.rightTop image {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.addItemFirst > image {
+  width: 300rpx;
+  height: 158rpx;
+  margin: 0 25rpx;
+  border-radius: 12rpx;
+}

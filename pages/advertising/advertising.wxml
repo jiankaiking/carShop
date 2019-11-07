@@ -1,0 +1,65 @@
+<view class="advePage">
+  <view class="postTop">
+    <view class="centertext">
+      <image src="../public/ggid.png"></image>
+      <view>广告购买</view>
+      <text>高效投递 大量曝光</text>
+    </view>
+    <view class="posiview">
+      <view class="optionsCont">
+        <view class="timenow">
+          <view class="timeh" bindtap="optionTime">
+            <text>{{sendTime}}</text>
+            <image class="rightImg" src="../public/right.png"></image>
+          </view>
+          <view class="positime" hidden="{{!timeFlage}}">
+            <view class="timepicker">
+              <picker-view indicator-style="height: 50px;" class="picker" value="{{value}}" bindchange="bindChange">
+                <picker-view-column>
+                  <view wx:for="{{years}}">{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                  <view wx:for="{{months}}">{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                  <view wx:for="{{days}}">{{item}}</view>
+                </picker-view-column>
+              </picker-view>
+            </view>
+            <view class="timeButton">
+              <button bindtap="clearTime">取消</button>
+              <button bindtap="trueTime">确认</button>
+            </view>
+          </view>
+        </view>
+        <view class="timenow">
+          <view class="timeh" bindtap="optionWeek">
+            <text>{{weekIndex == null?'投递时长':weekItem[weekIndex].showText}}</text>
+            <image class="rightImg" src="../public/right.png"></image>
+          </view>
+          <view class="weekP" hidden="{{ !weekFlage }}">
+            <view class="weekPick">
+              <view class="weekPickItem" wx:for="{{weekItem}}" bindtap="trueWeek" wx:key="{{index}}" data-index="{{index}}">
+                <view class="weekleft">
+                  <text class="{{index == weekIndex?'onclass':''}}">{{item.showText}}</text>
+                  <view  class="weekprice">费用：<text>{{item.price}}</text></view>
+                </view>
+                <image hidden="{{weekIndex != index}}" src="../public/greencheck.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="botBox">
+          <view class="boxshowd">
+            <view class="leftprice"> 费用：
+              <text>{{weekIndex == null?'':weekItem[weekIndex].price}}</text>
+            </view>
+            <view class="button">
+              <button class="btn" bindtap="trueBtn">购买</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

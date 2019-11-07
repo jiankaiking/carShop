@@ -1,0 +1,81 @@
+<view class="indexPage">
+  <view class="searchTab">
+    <view class="searchTop">
+      <view class="searchBarLeft" bindtap="goMap">
+        <image src="../public/address.png"></image>
+        <text>{{locateCity}}</text>
+      </view>
+      <view class="searchBarCenter" bindtap="gosearch">
+        <view class="searchImg">
+          <image src="../public/search.png"></image>
+        </view>
+        <view class="inputSearch">
+          <input placeholder="车用机油" disabled></input>
+        </view>
+      </view>
+      <view class="searchBarRight">
+        <view class="twoImg" bindtap="click">
+          <image src="../public/shopcar.png"></image>
+          <view>购物车</view>
+        </view>
+      </view>
+    </view>
+    <view class="prevConnte">
+      <view class="banner">
+        <swiper autoplay circular>
+          <swiper-item wx:for="{{common}}" data-type="0" data-index="{{index}}" wx:key="{{index}}" bindtap="goCoupon">
+
+            <image src="{{domain}}/{{item.picture}}"></image>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <view class="prodct">
+    <view class="prodctbanner">
+      <view class="prev">
+        <view class="leftPrev" bindtap="leftPrev">
+          <image src="../public/prevleft.png"></image>
+        </view>
+        <view class="rightPrev" bindtap="rightPrev">
+          <image src="../public/prevright.png"></image>
+        </view>
+      </view>
+      <swiper class="swiperBox" current="{{swiperIndex}}" autoplay circular indicator-active-color="#fff">
+       <swiper-item wx:for="{{business}}" data-type="1" data-index="{{index}}" wx:key="{{index}}" bindtap="goCoupon">
+          <image src="{{domain}}/{{item.picture}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="shopCont">
+    <view class="shopTitle">
+      <image src="../public/preleft.png"></image>
+      <text>分享得好礼</text>
+      <image src="../public/preright.png"></image>
+    </view>
+    <view class="storeList">
+      <view class="storeCont {{fixdFlage?'postTop':''}}">
+        <view wx:for="{{navTitle}}" wx:key="{{index}}" data-id="{{item.id}}" class="storeName {{itemIndex == index?'active':''}}" bindtap="itemTable" data-index="{{index}}">{{item.name}}</view>
+      </view>
+    </view>
+    <!--  推荐 -->
+
+    <view class="storeMsgNav">
+      <!-- <scroll-view scroll-y style="height:700rpx;"> -->
+        <view class="storeMsgitem" wx:for="{{itemNav0}}" wx:key="{{index}}" bindtap="goStore" data-id="{{item.id}}">
+          <view class="goodImg">
+            <image class="proImg" src="{{domain}}/{{item.coverImg}}">></image>
+          </view>
+          <view class="rightCont">
+            <view class="proName">{{item.title}}</view>
+            <view class="btnCont">
+              <button class="sharkBtn">分享</button>
+            </view>
+          </view>
+        </view>
+      <!-- </scroll-view> -->
+    </view>
+  </view>
+</view>
+<view style="padding:40rpx 0; text-align:center; color:#999; font-size:32rpx;">没有更多了</view>

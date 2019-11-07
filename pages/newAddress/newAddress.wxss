@@ -1,0 +1,12 @@
+/* pages/newAddress/newAddress.wxss */
+.contenner{ width: 100%; padding: 30rpx; box-sizing: border-box; }
+.optionsList{ width: 100%; display: flex; justify-content: flex-start; flex-direction: column;}
+.optionsItem{ width: 100%; border-bottom: 1px solid #E3E3E3; font-size: 28rpx;}
+.optionsItem input{ height: 100rpx; line-height: 100rpx; width: 90%;}
+.checkimg{width: 38rpx; height: 38rpx;}
+.flexitem{ display: flex;  justify-content: space-between; align-items: center;}
+.postBtn{ padding: 0 60rpx; width: 100%;   box-sizing: border-box; margin-top: 120rpx;}
+.btn{height:88rpx;
+background:linear-gradient(270deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+
+border-radius:44rpx; color: #fff; font-size: 32rpx; line-height: 88rpx;}

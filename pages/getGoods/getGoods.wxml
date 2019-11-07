@@ -1,0 +1,110 @@
+
+<view class="goodsCont">
+  <view class="paddingCont">
+    <view class="changePadding">
+      <view class="typeconter">
+        <view data-index="1" bindtap="getType" class="{{stringItem.type == 1?'active':''}}">快递邮寄</view>
+        <view data-index="2" bindtap="getType" class="{{stringItem.type == 2?'active':''}}">门店自提</view>
+        <view data-index="3" bindtap="getType" class="{{stringItem.type == 3?'active':''}}">送货上门</view>
+      </view>
+    </view>
+    <view class="changePadding">
+      <view class="firstTable" hidden="{{stringItem.type == 2}}" bindtap="goAddress">
+        <view class="bindaddress" wx:if="{{stringItem.address==null}}">请输入地址</view>
+        <view class="addressBox" wx:if="{{stringItem.address!=null}}">
+          <view class="addressBox-top">
+            <text class="addressName">{{stringItem.name}}</text>
+            <text class="addressPhone">{{stringItem.phone}}</text>
+          </view>
+          <view class="address">
+            <view class="addressMsg">{{stringItem.address}}</view>
+            <view class="rightImg">
+              <image src="../public/right.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="twoTable" hidden="{{stringItem.type!= 2}}">
+      
+          <view class="tableTop">
+            <view class="store">
+              <view class="storeimg">
+                <image src="{{domain}}/{{storeMsg.img}}"></image>
+              </view>
+              <view class="storetext">
+                <text class="storeName">{{storeMsg.name}}</text>
+                <text class="storeAddress">{{storeMsg.address}}</text>
+              </view>
+              <view class="storerightimg">
+                <image src="../public/right.png"></image>
+              </view>
+            </view>
+            <view class="optionsnav">
+              <view class="timeer">
+                <view class="optionstitle">自提时间:</view>
+                <view class="optionsMsg">
+                  <text>{{stringItem.selfMention}}</text>
+                  <image src="../public/right.png" class="timerImg"></image>
+                </view>
+              </view>
+              <view class="timeer">
+                <view class="optionstitle">预留电话:</view>
+                <view class="optionsMsg">
+                  <text>{{stringItem.phone}}</text>
+                  <image src="../public/phone.png" class="phoneImg"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        
+
+    </view>
+    <view class="changePadding">
+      <view class="goodsMsg">
+        <view class="goodsbox">
+          <view class="goodsLeft">
+            <image src="{{domain}}/{{stringItem.goodImg}}"></image>
+          </view>
+          <view class="goodsRight">
+            <view class="goodsrTop">
+              <view class="goodsName">{{stringItem.goodName}}</view>
+              <view class="goodsNum">{{stringItem.goodNum}}</view>
+            </view>
+            <view class="price">¥{{price}}</view>
+          </view>
+        </view>
+        <view class="moneyBox">
+          <view class="monetItem">
+            <text>商品总额</text>
+            <text>¥0.00</text>
+          </view>
+          <view class="monetItem">
+            <text>服务费</text>
+            <text>¥{{stringItem.serviceCharge}}</text>
+          </view>
+          <view class="monetItem">
+            <text>运费</text>
+            <text>¥{{stringItem.freight}}</text>
+          </view>
+          <view class="monetItem itempadding">
+            <text>合计</text>
+            <text class="trueprice">¥{{price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="saveButtom">
+  <view class="savebox">
+    <view class="saveMoney">合计:
+      <text>¥{{price}}</text>
+    </view>
+    <view class="savebtn">
+      <button class="btn" bindtap="saveOrder">提交订单</button>
+    </view>
+  </view>
+</view>

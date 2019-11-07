@@ -1,0 +1,31 @@
+<view class="searchPage">
+  <view class="searchTop">
+    <view class="searchBarCenter">
+      <view class="searchImg">
+        <image src="../public/search.png"></image>
+      </view>
+      <view class="inputSearch">
+        <input placeholder="车用机油" bindinput="inputvalue"></input>
+      </view>
+    </view>
+    <view class="searchBtn" bindtap="gosearchMsg"><button class="btn">搜索</button></view>
+  </view>
+  <view class="seachHistore">
+     <view class="historeTitle">
+       <text>搜索历史</text><button bindtap="clearSearch">清空</button>
+     </view>
+     <view class="searchHotnav">
+          <view class="searItem" bindtap="goSearch" data-item="{{item.keyword}}" wx:for="{{searchHistory}}" wx:key="{{index}}">{{item.keyword}}</view>
+       </view>
+  </view>
+  <view class="hotSearch">
+   <view class="historeTitle">
+       <text>热门历史</text>
+     </view>
+    <view class="searchCont">
+       <view class="searchHotnav">
+          <view class="searItem"  bindtap="goSearch" data-item="{{item.keyword}}" wx:for="{{hotSearch}}" wx:key="{{index}}">{{item.keyword}}</view>
+       </view>
+    </view>
+  </view>
+</view>

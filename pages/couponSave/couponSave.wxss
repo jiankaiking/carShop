@@ -1,0 +1,152 @@
+/* pages/couponSave/couponSave.wxss */
+
+/* pages/myorder/myorder.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.orderContenner {
+  width: 100%; padding: 30rpx 0;
+}
+
+.orderTop {
+  width: 100%;
+  background: #fff;
+  height: 88rpx;
+  box-shadow: 0px 1px 6rpx rgba(0, 0, 0, 0.15);
+}
+
+.orderNav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.orderItem {
+  flex: 1;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+}
+
+.active {
+  color: #2caefc;
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  width: 44rpx;
+  bottom: 12rpx;
+  left: 50%;
+  margin-left: -22rpx;
+  height: 4rpx;
+  background: #2caefc;
+  opacity: 1;
+  border-radius: 2rpx;
+}
+
+.couponList {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.couponListTitle {
+  color: #333;
+  font-size: 32rpx;
+  padding: 30rpx 0;
+}
+
+.couponListItem {
+  width: 100%;
+  background: linear-gradient(89deg, rgba(93, 117, 255, 1) 0%, rgba(119, 208, 255, 1) 100%);
+  border: 1px solid rgba(0, 0, 0, 0);
+  margin-bottom: 25rpx;
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.itemTop {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.price {
+  color: #fe0502;
+}
+
+.itemCenter {
+  position: relative;
+  width: 100%;
+  padding: 30rpx 0;
+  border-bottom: 1px dashed #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+view.red{ color: #FF3736; font-size: 36rpx}
+view.yellow{ color: #FFC917;}
+.time {
+  color: #fff; padding-top:30rpx;
+  font-size: 24rpx;
+}
+
+.itemCenter::after {
+  position: absolute;
+  content: "";
+  bottom: -15rpx;
+  left: -45rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+
+.itemCenter::before {
+  position: absolute;
+  content: "";
+  bottom: -15rpx;
+  right: -45rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+
+.monney {
+  font-size: 24rpx;
+  color: #ffc917;
+}
+
+.showE button {
+  height: 56rpx; width: 140rpx;
+  background: rgba(255, 255, 255, 1);
+  color: #6b7dff;
+  font-size: 24rpx;
+  line-height: 56rpx;
+  border-radius: 44rpx;
+}
+
+.itemButtom {
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+  color: #dce1ff;
+  font-size: 24rpx;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

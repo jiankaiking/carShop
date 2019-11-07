@@ -1,0 +1,24 @@
+<view class="addVip">
+    <view class="vipbox">
+      <view class="viptop">
+       <view class="aticorVip">
+         <image src="{{domain}}{{store.shop.img}}"></image>
+       </view>
+       <view class="vipstore">
+         <view class="storeName">{{store.shop.name}}</view>
+         <view class="storeName"><image src="../public/phone.png"></image><text>{{store.shop.contact}}</text></view>
+         <view class="storeMoney">门店会员折扣：30元</view>
+         
+       </view>
+      </view>
+      <view class="vipbot">
+         <view class="address"><image src="../public/address.png"></image><text>{{store.shop.address}}</text></view> 
+      </view>
+    </view>
+    <view class="optionsconfim">
+       <view class="confimTitle">是否关联门店</view>
+       <view class="buttonBox">
+         <button bindtap="clearBtn">取消</button><button bindtap="trueAddVip">确认</button>
+       </view>
+    </view>
+</view>

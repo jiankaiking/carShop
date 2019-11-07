@@ -1,0 +1,148 @@
+.paypage {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.paybox {
+
+  margin-top: 105rpx;
+  width: 100%;
+  box-shadow: 0 0 20rpx rgba(206, 208, 209, 0.6);
+}
+.preferential{ color: red;}
+.couponowmRight{ display: flex; align-items: center;}
+.paybox::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+
+.top::after {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  bottom: -20rpx;
+  left: -20rpx;
+  background: #fff;
+
+}
+.top::before {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  bottom: -20rpx;
+  right: -20rpx;
+  background: #fff;
+  
+}
+.proImg {
+  padding: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.proImg image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.proName {
+  color: #333;
+  font-size: 32rpx;
+  padding-top: 30rpx;
+}
+
+.proBorder {
+  width: 100%;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.proMoney, .coupon {
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.monneyName {
+  color: #999; font-weight: 400;
+  font-size: 28rpx;
+  padding: 40rpx 0;
+}
+.palceClass{ color: #333;}
+.monneyNum {
+  font-size: 35rpx; display: flex; justify-content: flex-start; align-items: center;
+  color: #333; padding-bottom: 10rpx;
+  font-weight: 600;
+}
+.monneyNum input{ margin-left: 20rpx;}
+
+.coupon image {
+  width: 15rpx;
+  height: 26rpx;
+}
+
+.flexBig {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexItem {
+  display: flex;
+  padding: 30rpx 0;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.flexItem text.leftText {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.prices {
+  text-align: right;
+  padding: 37rpx 30rpx 50rpx;
+}
+
+.pricesBox {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.pricesBox text {
+  color: #fe0502;
+  font-size: 36rpx;
+}
+
+.paybotton {
+  box-sizing: border-box;
+  width: 100%;
+  height: 88rpx;
+  padding: 0 60rpx;
+  margin-top: 85rpx;
+}
+
+.payBtn {
+  width: 100%;
+  height: 88rpx;
+  background:linear-gradient(270deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  border-radius: 44rpx;
+}

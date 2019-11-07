@@ -1,0 +1,57 @@
+<view class="advAdmin">
+  <view class="advStatus" wx:if="{{advMsg!=null}}">
+    <view class="statusNav" wx:if="{{advMsg.status == 0}}">
+      <view>广告正在
+        <text class="advStatus">审核中</text>
+      </view>
+    </view>
+    <view class="statusNav" wx:if="{{advMsg.status == 1}}">
+      <view>广告信息
+        <text>审核成功</text>
+      </view>
+      <button class="resBtn" bindtap="resBtn">重新提交</button>
+    </view>
+    <view class="statusNav" wx:if="{{advMsg.status == 2}}">
+      <view>广告信息
+        <text>审核失败</text>更换广告请重新提交</view>
+    </view>
+  </view>
+  <view class="advTextare">
+    <view class="advTitle">请确认要投放的广告类型</view>
+    <view class="advText">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio">
+          <radio value="1" checked="{{advMsg.type == 1}}" />
+          <view>共享广告位（此广告位
+            <text>个人</text>,
+            <text>商家</text>均可使用）</view>
+        </label>
+        <label class="radio">
+          <radio value="2" checked="{{advMsg.type == 2}}" />
+          <view>共享广告位（此广告位仅
+            <text>商家</text>使用）</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="advAdminImg">
+    <view class="context">
+      <view class="startTitle">上传广告信息图片</view>
+      <view class="addImg">
+        <view class="addItemFirst" wx:if="{{imgContUrl.length !== 0}}">
+          <view class="rightTop" catchtap="deletImg">
+            <image src="../public/delet.png"></image>
+          </view>
+          <image src="{{domain + '/sys/common/view/' + imgContUrl}}"></image>
+        </view>
+        <view class="addItem" bindtap="addImg" wx:if="{{imgContUrl.length == 0}}">
+          <image src="../public/camer.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="postBtn" bindtap="sbmitAdv">
+    <button class="btn" wx:if="{{advMsg.status == 2 || advMsg == null}}">提交</button>
+  </view>
+
+</view>

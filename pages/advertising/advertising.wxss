@@ -1,0 +1,210 @@
+/* pages/advertising/advertising.wxss */
+
+.advePage {
+  width: 100%;
+}
+
+.postTop {
+  height: 372rpx;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(254, 254, 254, 1) 0%, rgba(254, 223, 179, 1) 100%);
+}
+
+.centertext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centertext image {
+  width: 100rpx;
+  height: 100rpx;
+  padding-top: 50rpx;
+}
+
+.centertext view {
+  padding: 30rpx 0 18rpx;
+  color: #92522e;
+  font-size: 36rpx;
+}
+
+.centertext text {
+  color: #92522e;
+  font-size: 28rpx;
+}
+
+.posiview {
+  position: absolute;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: -410rpx;
+}
+
+.rightImg {
+  width: 15rpx;
+  height: 26rpx;
+}
+
+.optionsCont {
+  border-radius: 8rpx;
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  width: 100%;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.timenow {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.timeh {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timenow text {
+  color: #333;
+  font-size: 28rpx;
+}
+
+.botBox {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 30rpx;
+  margin-top: 120rpx;
+  box-sizing: border-box;
+}
+
+.boxshowd {
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 44rpx;
+  overflow: hidden;
+  align-items: center;
+}
+
+.leftprice {
+  width: 60%;
+}
+
+.button {
+  width: 40%;
+}
+
+.leftprice {
+  color: #333;
+  font-size: 32rpx;
+  padding-left: 30rpx;
+}
+
+.leftprice text {
+  color: #fe0502;
+}
+
+.btn {
+  border-bottom-left-radius: 44rpx;
+  background: linear-gradient(270deg, rgba(59, 87, 255, 1) 0%, rgba(80, 194, 254, 1) 100%);
+  color: #fff;
+}
+
+.positime {
+  position: absolute;
+  bottom: -600rpx;
+  height: 600rpx;
+  width: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  border-radius: 8rpx;
+}
+
+.timepicker view {
+  line-height: 50px;
+  text-align: center;
+}
+
+.timeButton {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.timeButton button {
+  height: 80rpx;
+  flex: 1;
+  background: #fff;
+  font-size: 32rpx;
+  color: #333;
+  line-height: 80rpx;
+  border-top: 1px solid #e3e3e3;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+  border-radius: 0;
+}
+
+.picker {
+  height: 100%;
+}
+
+.timepicker {
+  height: 510rpx;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.weekP {
+  position: absolute;
+  top: 100rpx;
+  
+  width: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10rpx rgba(0, 0, 0, 0.16);
+  border-radius: 8rpx;
+}
+
+.weekPick {
+  width: 100%;
+  padding: 30rpx;
+  
+  box-sizing: border-box;
+}
+
+.weekPickItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E3E3E3;
+  align-items: center;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+
+.weekPickItem image {
+  width: 32rpx;
+  height: 21rpx;
+}
+
+.weekleft {
+  display: flex;
+  justify-content: flex-start;
+}
+.weekleft text:first-child{ width: 150rpx; padding-left: 30rpx;}
+.weekleft text.onclass{ color: #2CAEFC}
+.weekleft view{ font-size: 28rpx;}
+.weekprice text{ color: #FE0502}

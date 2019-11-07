@@ -1,0 +1,20 @@
+<view class="routeroder">
+<view wx:if="{{routerOrder.length == 0}}" class="orderNone">
+       <image src="../public/ordernone.png"></image>
+       <view>订单还是空的</view>
+    </view>
+   <view class="routerordernav">
+      <view class="navItem" wx:for="{{routerOrder}}"  wx:if="{{item.shop != null}}">
+        <view class="itemmsg">
+           <view class="itemImg"><image src="{{doamin}}{{item.shop.img}}"></image></view>
+           <view class="itemtext">
+             <view class="itemName">{{item.shop.name}}</view>
+             <view class="itemTime">{{item.shopOrder.createTime}}</view>
+           </view>
+        </view>
+        <view class="itemStatus">
+          <text>扫码支付</text><text>¥{{item.shopOrder.payAmount}}</text>
+        </view>
+      </view>
+   </view>
+</view>

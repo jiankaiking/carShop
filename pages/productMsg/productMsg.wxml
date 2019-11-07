@@ -1,0 +1,263 @@
+<!--pages/productMsg/productMsg.wxml-->
+<view wx:if="{{!loginFalge}}">
+  <loginFlage bind:myevent="loginClose"></loginFlage>
+</view>
+<view class="productMsg">
+  <view class="productTop">
+    <view class="productSwriper">
+      <swiper class="swiper" indicator-dots autoplay>
+        <swiper-item wx:for="{{bannerCont}}" wx:key="{{index}}">
+          <image src="{{domain + '/sys/common/view/' + item}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="productText">
+      <view class="productName">{{goods.title}}</view>
+      <view class="productsmall">{{goods.title2}}</view>
+      <view class="producPrice">
+        <text class="nowPrice">¥0.00</text>
+        <text class="afterPrice">¥{{goods.price}}</text>
+      </view>
+      <view class="titlemsg">
+        该商品含有
+        <text>服务费{{goods.reduced}}元</text>,{{goods.laborcost}}
+        <view>
+        <text>快递费{{goods.freight}}元</text>
+      </view>
+      </view>
+      
+    </view>
+  </view>
+  <view class="productBot">
+    <view class="tickettitle">
+      <image src="../public/tic.png"></image>
+      <text>领取规则</text>
+    </view>
+    <view class="ticketRule">
+      <view>用户通过赠送将此商品分享给微信好友或分享到朋友圈，达到指定的分享数之后，即可免费领取相应产品。</view>
+      <view>用户可以选择快递邮寄、门店自提、送货上门三种提取方式， 快 递邮寄需支付快递费用，门店自提选择相应的门店自行提货即可，送货上门 需支付配送费。
+      </view>
+    </view>
+  </view>
+  <view class="proImgmsg">
+    <view class="tickettitle">
+      <text class="pjectMsg">商品详情</text>
+    </view>
+    <image src="{{domain + '/sys/common/view/' + goods.detail}}"></image>
+  </view>
+  <view class="estimate">
+    <view class="tickettitle">
+      <text class="pjectMsg" style="padding:0">商品评论</text>
+    </view>
+    <view wx:for="{{esimitame}}" class="esmitameBox">
+      <view class="esTop">
+        <view class="start">
+          <image src="{{item.commentXin >= 1?startLink:startUrl}}"></image>
+          <image src="{{item.commentXin  >= 2?startLink:startUrl}}"></image>
+          <image src="{{item.commentXin  >= 3?startLink:startUrl}}"></image>
+          <image src="{{item.commentXin  >= 4?startLink:startUrl}}"></image>
+          <image src="{{item.commentXin  >= 5?startLink:startUrl}}"></image>
+        </view>
+        <view class="esname">{{item.userName}}</view>
+      </view>
+      <view class="esTime">{{item.createTime}}</view>
+      <view class="esimage">
+         {{item.comment}}
+      </view>
+      <view class="esifile">
+         <image  wx:for="{{item.imgs}}" src="{{domain + '/sys/common/view/' + item}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="posifixBot" wx:if="{{goods.share - numtenFlage > 0}}">
+  <view class="left">
+    <image src="../public/shark.png"></image>
+    <text>赠送商品</text>
+  </view>
+  <view class="rightBtn" bindtap="svaepay">
+    <button class="savebtn">免费领取</button>
+  </view>
+  <view class="postTitle">再赠送{{goods.share - numtenFlage}}次即可免费领取</view>
+</view>
+<view class="backbtn" bindtap="backPages">
+  <image src="../public/back.png"></image>
+</view>
+
+
+
+
+<!--  点击领取  -->
+<view class="bgc" hidden="{{addCarflage}}" bindtap="bgcClick"></view>
+<view class="shakeView" hidden="{{!btnFlage}}">
+  <view class="postBot">
+    <button class="postMsg" open-type="share">
+      <image src="../public/wecat.png"></image>
+      <view>微信</view>
+    </button>
+    <view class="btnCont">
+      <button bindtap="clearBtn">确认</button>
+    </view>
+  </view>
+</view>
+
+<view class="buttonTwo" wx:if="{{goods.share - numtenFlage == 0}}">
+  <view class="butcont">
+    <button class="cargoing" bindtap="addCar">加入购物车</button>
+    <button class="truepay" bindtap="gopay">立即购买</button>
+  </view>
+</view>
+<view class="showProject" hidden="{{projectFlage}}">
+  <view class="showBox">
+    <view class="showtop">
+      <view class="projectleft">
+        <view class="showimg">
+          <image src="{{domain + '/sys/common/view/' + goods.coverImg}}"></image>
+        </view>
+        <view class="showtopText">
+          <view>¥0.00</view>
+          <view>库存:1324</view>
+          <view>已选:{{specification[optionsIndex]}}</view>
+        </view>
+      </view>
+      <view class="projectright" bindtap="closeP">
+        <image src="../public/close.png"></image>
+      </view>
+    </view>
+    <view class="showBoxScroll">
+      <view class="projectVolum">
+        <view class="projectVolumname">规格</view>
+        <view class="volumList">
+          <view wx:for="{{specification}}" class="volumItem {{optionsIndex == index?'active':'bbb'}}" bindtap="getSpecification" wx:key="{{index}}" data-index="{{index}}">{{item}}</view>
+        </view>
+      </view>
+      <view class="projectStore">
+        <view class="projectNumtitle">请选择门店</view>
+        <view class="optionsStore">
+          <view class="selecStore" bindtap="openStore">
+            <text>{{storeMsg == null?'请选择门店':storeMsg.name}}</text>
+            <image src="../public/right.png"></image>
+          </view>
+        </view>
+        <view class="storeOPtions" hidden="{{!storeShow}}">
+          <view class="storeBox">
+            <view class="storeItem" wx:for="{{storeCont}}" data-id="{{item.id}}" wx:key="{{index}}" bindtap="optionsStore" data-index="{{index}}">
+              <view class="imgLeft">
+                <image src="{{domain + '/sys/common/view/' + item.img}}"></image>
+              </view>
+              <view class="storeMsg">
+                <text class="storeMsgName">{{item.name}}</text>
+                <text class="storeMsgAddress">{{item.address}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="projectStore">
+        <view class="projectNumtitle">送货方式</view>
+        <view class="routerWay">
+          <view class="routerWayItem">
+            <view bindtap="opway" data-type="1" class="{{type == 1?'active':''}}">快递邮寄</view>
+            <view bindtap="opway" data-type="2" class="{{type == 2?'active':''}}">门店自提</view>
+            <view bindtap="opway" data-type="3" class="{{type == 3?'active':''}}">送货上门</view>
+          </view>
+        </view>
+      </view>
+      <view class="projectStore">
+        <view wx:if="{{type != 2}}" class="tureBox">
+          <view class="projectNumtitle">选择地址</view>
+          <view class="changePadding">
+            <view class="addressBox" hidden="{{type != 2}}">{{storeMsg == null?'请输入地址':storeMsg.address}}</view>
+            <view class="firstTable" hidden="{{type==2}}" bindtap="goAddress">
+              <view class="bindaddress" wx:if="{{addressCont==null}}">请输入地址</view>
+              <view class="addressBox" wx:if="{{addressCont!=null}}">
+                <view class="addressBox-top">
+                  <text class="addressName">{{addressCont.name}}</text>
+                  <text class="addressPhone">{{addressCont.phone}}</text>
+                </view>
+                <view class="address">
+                  <view class="addressMsg">{{addressCont.address}}</view>
+                  <view class="rightImg">
+                    <image src="../public/right.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{type == 2}}" class="showStore">
+          <view class="tableTop">
+            <view class="store">
+              <view class="storeimg">
+                <image src="{{domain + '/sys/common/view/' + storeMsg.img}}"></image>
+              </view>
+              <view class="storetext">
+                <text class="storeName">{{storeMsg.name}}</text>
+                <text class="storeAddress">{{storeMsg.address}}</text>
+              </view>
+              <view class="storerightimg">
+                <image src="../public/right.png"></image>
+              </view>
+            </view>
+            <view class="optionsnav">
+              <view class="timeer">
+                <view class="optionstitle">自提时间:</view>
+                <view class="optionsMsg">
+                  <picker mode="date" class="tiempicker" value="{{date}}" start="2015-09-01" end="2028-09-01" bindchange="bindDateChange">
+                    <view class="picker">
+                      {{self_mention == null?'请选择时间':self_mention}}
+                    </view>
+                  </picker>
+
+                  <image src="../public/right.png" class="timerImg"></image>
+                </view>
+              </view>
+              <view class="timeer" bindtap="showclent">
+                <view class="optionstitle">预留电话:</view>
+                <view class="optionsMsg">
+                  <text>{{clientPhone}}</text>
+                  <image src="../public/phone.png" class="phoneImg"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="projectNum">
+        <view class="projectNumtitle">数量</view>
+        <view class="numoption">
+          <view class="prevb">-</view>
+          <text class="prevNum">{{projectNum<10?'0' + projectNum:projectNum}}</text>
+          <view class="prevb">+</view>
+        </view>
+      </view>
+    </view>
+    <view class="addCarbtn">
+      <button bindtap="addCart">确定</button>
+    </view>
+  </view>
+</view>
+<view class="writeBox" wx:if="{{clientMsg}}">
+  <view class="writeCont">
+    <view class="writeTime">
+      <view class="writeItem">
+        <text>预留手机</text>
+        <input placeholder="请输入手机号" bindinput="clientPhone"></input>
+      </view>
+      <view class="writeItem">
+        <text>姓名</text>
+        <input placeholder="请输入姓名" bindinput="clientName"></input>
+      </view>
+    </view>
+    <view class="trueInput">
+      <view></view>
+      <view class="inputButton">
+        <text bindtap="tureClient">确认</text>
+        <text bindtap="clearClient">返回</text>
+      </view>
+    </view>
+  </view>
+</view>

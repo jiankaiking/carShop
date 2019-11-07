@@ -1,0 +1,51 @@
+<view class="reimburse">
+  <view class="productMsg">
+    <view class="product">
+      <view class="porImage">
+        <image src="{{domain}}/{{goods.salesOrderDetail.goodImg}}"></image>
+      </view>
+      <view class="textMsg">
+        <view class="proTop">
+          <view class="proName">{{goods.salesOrderDetail.goodName}}</view>
+          <text class="proNum">x{{goods.salesOrderDetail.goodNum}}</text>
+        </view>
+        <view class="proBom">
+          <view class="proVolum">{{goods.salesOrderDetail.goodSpecification}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="reimburseMoney">
+    <view class="reimburseCont">
+      <text>退款金额：</text>
+      <text class="money">¥{{goods.salesOrder.payAmount}}</text>
+    </view>
+  </view>
+  <view class="cause">
+    <view class="causeTitle">退款原因</view>
+    <view class="textareaMsg">
+      <textarea placeholder="请填写退款的原因" bindinput="getValue"></textarea>
+    </view>
+
+  </view>
+  <view class="reimburseImg">
+    <view class="causeTitle">上传凭证
+      <text>(最多上传3张凭证)</text>
+    </view>
+
+    <view class="addImg">
+      <view class="addItemFirst"   wx:for="{{imgContUrl}}" wx:if="{{imgContUrl.length !== 0}}">
+        <view class="rightTop" catchtap="deletImg">
+          <image src="../public/delet.png"></image>
+        </view>
+        <image src="{{domain + '/sys/common/view/' + item}}"></image>
+      </view>
+      <view class="addItem" bindtap="addImg"  wx:if="{{imgContUrl.length <= 2}}">
+        <image src="../public/camer.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="saveBtn">
+    <button class="btn" bindtap="saleOrder">提交</button>
+  </view>
+</view>

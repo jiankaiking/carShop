@@ -1,0 +1,15 @@
+<view class="showCode">
+  <view class="showBox">
+     <view class="showMsg">
+       <view class="msgImg"><image></image></view>
+       <view class="msgName">
+          <text>马驰宝迈跑机油5W-60玛莎</text><text>推荐码名片</text>
+       </view>
+     </view>
+     <view class="showImg">
+       <image></image>
+     </view>
+     <view class="showalt">商家扫描二维码即可完成订单</view>
+  </view>
+  <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+</view>

@@ -1,0 +1,42 @@
+<view class="paypage">
+  <view class="paybox">
+    <view class="top">
+      <view class="proImg">
+        <image src="{{domain}}{{store.shop.img}}"></image>
+      </view>
+      <view class="proName">{{store.shop.name}}</view>
+    </view>
+    <view class="proMoney">
+      <view class="proBorder">
+        <view class="monneyName">消费金额</view>
+        <view class="monneyNum">
+           <label>¥</label><input bindinput="getprice" placeholder-class="palceClass" bindblur="bindblur" placeholder="输入金额"></input>
+        </view>
+       
+      </view>
+    </view>
+    <view class="coupon">
+      <view class="proBorder flexBig">
+        <view class="vipcoupon flexItem">
+          <text class="leftText">会员折扣</text>
+          <text>-{{store.binding?store.shop.memberDiscount:0}}</text>
+        </view>
+        <view class="couponowm flexItem" bindtap="goConponpage">
+          <text  class="leftText">优惠券</text>
+          <view class="couponowmRight">
+            <text wx:if="{{couponId == null}}">{{coupon.length <= 0?'选择优惠卷':'可用优惠卷' + coupon.length + '张'}}</text>
+            <text class="preferential" wx:if="{{couponId != null}}">-¥{{preferential}}</text>
+            <image src="../public/right.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="prices">
+      <view class="pricesBox">
+        合计
+        <text class="pricesMoney">¥{{price - preferential > 20 && store.binding ?price - preferential - store.shop.memberDiscount:price - preferential}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="paybotton"><button class="payBtn" bindtap="truepay">支付</button></view>
+</view>

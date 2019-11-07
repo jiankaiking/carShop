@@ -1,0 +1,153 @@
+/* pages/search/search.wxss */
+
+.searchPage {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.orderNone image{ width: 250rpx; height: 250rpx; margin:156rpx 0 50rpx; }
+.orderNone{ color: #999999; font-size: 28rpx; display: flex; align-items: center; flex-direction: column;}
+.goodsImg{ width: 210rpx; height: 210rpx; margin-right: 16rpx;}
+.searchTop {
+  width: 100%;
+  background: #fff; z-index: 99;
+  padding: 10rpx 30rpx 10rpx; box-sizing: border-box;
+  position: fixed;top: 0; left: 0; right: 0;box-shadow:0px 0px 3px #9C9C9C;
+}
+.postFixed{ width: 100%;display: flex; justify-content: space-between;}
+.searchBarCenter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 550rpx;
+  height: 68rpx;
+  border-radius: 40rpx;
+  background: #f5f5f5;
+}
+
+.searchImg {
+  width: 32rpx;
+  height: 32rpx;
+  padding-left: 20rpx;
+  padding-right: 10rpx;
+}
+
+.searchImg image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.inputSearch {
+  width: 80%;
+  height: 68rpx;
+  font-size: 24rpx;
+}
+
+.inputSearch input {
+  height: 68rpx;
+}
+
+.searchBtn image {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.searchBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchBtn text {
+  color: #333;
+  font-size: 24rpx;
+}
+
+.searchBar {
+
+  width: 100%;
+}
+
+.scrollItem {
+  padding: 28rpx 22rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #333;
+  position: relative;
+}
+
+view.active {
+  color: #3b57ff;
+}
+
+view.active::after {
+  position: absolute;
+  content: '';
+  width: 44rpx;
+  height: 5rpx;
+  background: rgba(59, 87, 255, 1);
+  bottom: 12rpx;
+  left: 50%;
+  margin-left: -22rpx;
+}
+
+.scrollview {
+  width: 100%;
+  white-space: nowrap;
+}
+.storeMsgNav {
+  width: 100%;
+}
+
+.proImg {
+  width: 210rpx;
+  height: 210rpx;
+ 
+}
+
+.storeMsgitem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  position: relative;
+}
+
+.storeMsgitem::after {
+  position: absolute;
+  content: "";
+  width: 518rpx;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  background: #e3e3e3;
+}
+
+.rightCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sharkBtn {
+  width: 120rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #fff;
+  font-size: 30rpx;
+  background:linear-gradient(270deg,rgba(59,87,255,1) 0%,rgba(80,194,254,1) 100%);
+  border-radius: 40rpx;
+  margin: 0;
+}
+.btnCont {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.proName {
+  color: #333;
+  font-size: 32rpx;
+}
+
+.proSwiper{ padding-top: 180rpx;}
